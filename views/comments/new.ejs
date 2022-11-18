@@ -1,0 +1,23 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<div class="container text-center p-4">
+    <h1 class="p-4"style="color: rgb(20, 20, 157);">Add A FAQ</h1>
+    <form action="/comments" method = 'post' style="font-family: cursive;color:blueviolet;font-weight: bold;";>
+    <section>
+        <label for="username">Question</label>
+        <input type="text" id="username"placeholder="username" name="username">
+    </section>
+    
+    <section >
+        <label for="comment" >Answer Here</label>
+        <br>
+        <textarea  id="comment" name="comment" cols="50" rows="5"style="font-family: cursive;"></textarea>
+    </section>
+    <button class=" rounded-3 mt-4 mb-4 fs-3 fw-bold text-danger">submit</button>
+    </form>
+
+    <a href="/comments" style="color:brown;font-weight:bolder">Back to index</a>
+</div>
+    <%- include('../partials/footer') %>
+ 

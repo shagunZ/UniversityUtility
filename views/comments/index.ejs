@@ -1,0 +1,21 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+    <h1 class="container mt-4 mb-4 pt-4">FAQ's</h1>
+ 
+    <ul >
+        <% for(let c of comments) {%>
+            <div class="container">
+            <li style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'; color: black;">
+
+                <b>Q. <%=c.username %></b> <br>
+
+               <p style="font-family: cursive;color:blueviolet"> <%= c.comment %> </p>
+                <a href="/comments/<%=c.id%>">details</a>
+                <hr>
+            </li>
+        </div>
+        <% }%>
+    </ul>
+  
+    <h3 class="container mt-4 mb-4 pt-4 text-center">  <a href="/comments/new" style="color:brown;font-weight:bolder">New comment</a></h3>
+    <%- include('../partials/footer') %>

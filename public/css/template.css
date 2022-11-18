@@ -1,0 +1,42 @@
+
+    body {
+        overflow-x: hidden; /* Hide scrollbars */
+        background-color: rgb(251, 244, 245);
+      }
+
+.navbar-nav{
+    font-size: large;
+    font-weight: bolder;
+    position: relative;
+    left: 2%;
+}
+.nav-link{
+    color: white !important;
+    margin: 3px;
+}
+.nav-link:hover{
+    color: black !important;
+    background-color: white;
+    border-radius: 4px;
+}
+
+
+li{
+   color: white;
+    font-weight: bold;
+    list-style: none;
+    padding: 0.2em;
+}
+
+.news{
+    color: purple;
+    background-color: rgb(219, 208, 240);
+    margin-top: 2%;
+    margin-bottom: 3%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-radius: 13%; */
+
+  
+}

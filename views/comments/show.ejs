@@ -1,0 +1,21 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<body>
+    <!-- <h1>Comment id: <%= comment.id %> </h1> -->
+    <div class="container mt-4 pt-4">
+    <h1 class="p-4"style="color: rgb(20, 20, 157);"><%= comment.username %> </h1>
+    <h2 style="color: purple;"><%= comment.comment %> </h2>
+</div>
+<div class="container p-4 text-center">
+    <a href="/comments" style="font-size: large;font-weight: bolder;color: rgb(92, 10, 132);">Back to index</a> <br>
+    <a href="/comments/<%=comment.id%>/edit" style="font-size: large;font-weight: bolder;color: rgb(92, 10, 132);">Edit comment</a>
+    <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
+        <button class=" rounded-3 mt-4 fs-3 fw-bold text-danger">Delete</button>
+    </form>
+</div>
+    <%- include('../partials/footer') %>

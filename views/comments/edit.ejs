@@ -1,0 +1,11 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<div class="container text-center form-floating">
+    <h1 class="p-4" style="font-family: cursive;color:blueviolet">Edit</h1>
+    <form method="POST" action="/comments/<%=comment.id%>?_method=PATCH">
+        <textarea class="form-control" name="comment" id="" cols="30" rows="10" style="font-family: cursive;"><%= comment.comment %></textarea>
+        <button class=" rounded-3 mt-4 fs-3 fw-bold text-primary">Save</button>
+    </form>
+</div>
+    <%- include('../partials/footer') %>
