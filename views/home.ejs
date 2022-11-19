@@ -51,64 +51,83 @@
     <div class="container text-center">
       <div class="row">
         <div class="col">
-          <div class="card news" style="width: 18rem ;height:25rem;">
+          <div class="card news" style="width: 18rem ;">
             <div class="card-body">
-              <h5 class="card-title">News and Updates</h5>
+              <h5 class="card-title fs-3">Updates</h5>
               <p class="card-text ">
-                NOV.
-                16 - 19
-                HackAthon SMVDU
-                Organized by SMVD University and Higher Education Department J&K...Read More
-                <hr>
-                NOV.
-                18 - 19
-                Sahitya Akademi
-                in collaboration with SMVDU - Critical Appraisal and Evaluation of Dogri Novel of 20th Century...Read More
-                <hr>
-                Essay Writing Contest
-                Essay Writing Contest at SMVDU Sponsored by Higher Education Department, Jammu &Kashmir...Read More</p>
+                <ul >
+                  <% for(let u of updates) {%>
+                      <div class="container">
+                      <li style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: rgb(101, 59, 101);">
+                   <b style="border-bottom: 3px solid #dba9fa; color: rgb(173, 17, 129);"> <%=u.date %></b> <br>
+                            <p > <%= u.title %>-<%=u.about%> </p>
+                           <hr>
+                      </li>
+                  </div>
+                  <% }%>
+              </ul>
+                </p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card news" style="width: 18rem ;height:25rem;">
+          <div class="card news" style="width: 18rem ;">
             <div class="card-body">
-              <h5 class="card-title">Jobs</h5>
+              <h5 class="card-title fs-3">Jobs</h5>
               <p class="card-text">
-                Rolling Advertisement for Project Staff for R&D Project on Cybersecurity at IIT Jammu
-                <hr>
-                Rolling Advertisement for Faculty Search Cum Selection at IIT Jammu
-                <hr>
-                Advertisement for the Position of SRF / JRF</p>
+                <ul >
+                  <% for(let j of jobs) {%>
+                      <div class="container">
+                      <li style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: rgb(101, 59, 101);">
+                   <b style="border-bottom: 3px solid #dba9fa; color: rgb(173, 17, 129);"><%=j.title%> - <%=j.date %></b> <br>
+                            <p > <%= j.about %> </p>
+                           <hr>
+                      </li>
+                  </div>
+                  <% }%>
+              </ul> 
+              </p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card news" style="width: 18rem ;height:25rem;">
+          <div class="card news " style="width: 18rem ;">
             <div class="card-body">
-              <h5 class="card-title">Awards and Achievements</h5>
+              <h5 class="card-title fs-3">Awards and Achievements</h5>
               <p class="card-text">
-                Prof. R. Uma Shankar, Senior Professor, BSBE has been conferred the Honorary Fellowship
-               <hr>
-                Dr. Vinay Sharma, Assistant Professor, BSBE has been conferred the Associateship
-                <hr>
-                PhD student, Ms. Neha Rani publishes a full research article in Organometallics</p>
+                <ul>
+                  <% for(let a of awards) {%>
+                      <div class="container">
+                      <li style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: rgb(101, 59, 101);">
+                   <b style="border-bottom: 3px solid #dba9fa; color: rgb(173, 17, 129);"><%= a.title %>- <%=a.year %></b> <br>
+                            <p ><%-a.about%> </p>
+                           <hr>
+                      </li>
+                  </div>
+                  <% }%>
+              </ul>
+              </p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card news" style="width: 18rem ;height:25rem;">
+          <div class="card news " style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Faculty</h5>
-                <p class="card-text">Dr. Ajay Kaul
-                  <hr>
-                  Mr. Manoj Kumar Verma
-                  <hr>
-                  Dr. Naveen Kumar Gondhi
-                  <hr>
-                  Sonika Gupta
-                  <hr>
-                  Dr. Sunanda Gupta,
+                <p class="card-text fs-3">Dr. Ajay Kaul
+                  <ul >
+                    <% for(let f of faculty) {%>
+                        <div class="container">
+                        <li style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: rgb(101, 59, 101);">
+                     <b style="border-bottom: 3px solid #dba9fa; color: rgb(173, 17, 129);"> <%=f.name %></b> <br>
+                              <p > <%= f.experience %>-<%=f.qualification%>
+                              <%=f.email%>
+                             </p>
+                             <hr>
+                        </li>
+                    </div>
+                    <% }%>
+                </ul>
                 </p>
               </div>
             </div>

@@ -1,0 +1,26 @@
+<%- include('partials/head')%>
+
+    <%- include('partials/navbar') %>
+
+
+        <% for (let post of posts) { %>
+        <h1 class="container text-center mt-4 text-primary">Let's Learn <%=name%></h1>
+        <p class="container"><%=post.title%> </p>
+    <div class="container">
+       <b> Introduction to <%=name.toUpperCase();%> </b>
+       <%=post.about%>
+    </div>
+
+   
+    <div class="container text-center "> 
+        <a target=”_blank” href="<%=post.links%>">IMPORTANTS LINKS</a>
+    </div>
+    
+    <div class="container text-center">
+        <iframe width="600" height="315" src="<%=post.youtube%>" 
+         frameborder="0" allowfullscreen></iframe>
+      </div>
+      <% } %>
+
+
+ <%- include('partials/footer') %>

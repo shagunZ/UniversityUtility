@@ -16,7 +16,8 @@ const redditdata = require('./data.json')
 const path = require('path')
 const methodOverride = require('method-override')
 const { v4: uuid } = require('uuid');
-
+const updateData = require('./data.json')
+const pathdata = require('./path.json')
 
 //serving static assets in express
 app.use(express.static(path.join(__dirname,'public')));
@@ -32,10 +33,120 @@ app.set('view engine', 'ejs')
 
 
 
+let updates = [
+    
+        {
+            "date": "16-19 NOV",
+            "title": " HackAthon SMVDU",
+            "about": " Organized by SMVD University and Higher Education Department J&K"
+        },
+        {
+            "date": "18 - 19 NOV",
+            "title": "Sahitya Akademi",
+            "about": " Critical Appraisal and Evaluation of Dogri Novel of 20th Century"
+        },
+        {
+            "date": "25 NOV",
+            "title": "Essay Writing Contest",
+            "about": " Sponsored by Higher Education Department, Jammu &Kashmir"
+        },
+        {
+            "date": "1 DEC",
+            "title": "Business Plan Competition",
+            "about": " Sponsored by Higher Education Department, Jammu & Kashmir"
+        },
+        {
+            "date": "33 NOV",
+            "title": " HackAthon SMVDU",
+            "about": " Organized by SMVD University and Higher Education Department J&K"
+        }
+    ]
+
+   let jobs = [
+        
+            {
+                "date": "16 November 2022",
+                "title": " Cybersecurity",
+                "about": " Rolling Advertisement for Project Staff for R&D Project on Cybersecurity at IIT Jammu"
+            },
+            {
+                "date": "25 November 2022",
+                "title": " Position of SRF / JRF",
+                "about": "interested candidates for the post of Senior / Junior Research Fellow (SRF / JRF) to work on the project titled “UWB Auxetic Antenna Array Development for Biomedical Application” sponsored by DST."
+            },
+            {
+                "date": "1 December 2022.",
+                "title": " Position of JRF in Mechanical Engineering",
+                "about": " Applications are invited from interested candidates for the post of Junior Research Fellow (JRF) to work on the project sanctioned by the Science and Engineering Research Board (SERB), India"
+            }
+            
+        ]
+    
+   let awards = [
+        
+            {
+                "year": "2022",
+                "title": " Aqib Mujtaba Declares Qualified for the Award of Ph.D.",
+                "about": " Research Scholar, School of Economics, Shri Mata Vaishno Devi University,qualified for the PhD degree in Economics award."
+            },
+            {
+                "year": "2021",
+                "title": " SMVDU Researcher Declares Qualified for the Ph.D. Degree",
+                "about": "Ph.D. student of School of Economics,(SMVDU), qualified for the award of the Doctor of Philosophy (PhD)."
+            },
+            {
+                "year": "2020",
+                "title": " Ms. Garima Gupta, a student, Cracks JRF Examination in Economics",
+                "about": "student of five-year Integrated M.Sc. Economics School of Economics, (SMVDU) has qualified Junior Research Fellowship (JRF)-cum-Assistant Professorship in her first attempt."
+            }
+        ]
+    
+    
+   let faculty = [
+        
+            {
+                "experience": "2003-2022",
+                "name": " Dr. Ajay Kaul",
+                "qualification": "B.Tech., M.Tech., Ph.D.",
+                "email": "ajay.kaul[at]smvdu.ac.in"
+            },
+            {
+                "experience": "2005-2022",
+                "name": " Dr. Manoj Kumar Gupta",
+                "qualification": "B.Tech., M.Tech., Ph.D.",
+                "email": "manoj.gupta[at]smvdu.ac.in"
+            },
+            {
+                "experience": "2013-2022",
+                "name": " Dr. Naveen Kumar Gondhi",
+                "qualification": "Ph.D.(Computer Science), M. Tech., CCNA",
+                "email": "naveen.gondhi[at]smvdu.ac.in"
+            },
+            {
+                "experience": "2011-2022",
+                "name": "Sonika Gupta ",
+                "qualification": "MCM,MCA",
+                "email": "sonika.gupta[at]smvdu.ac.in"
+            },
+            {
+                "experience": "2012-2022",
+                "name": " Dr.Sunanda Gupta",
+                "qualification": "MCA,Ph.D.",
+                "email": "sunanda.gupta[at]smvdu.ac.in"
+            }
+        ]
+    
+
+
+
 
 app.get('/',(req,res)=>{
-    res.render('home')
+    res.render('home',{updates,jobs,awards,faculty})
 })
+
+
+
+
 
 
 
@@ -44,9 +155,24 @@ app.get('/pathway',(req,res)=>{
 })
 
 
-app.get('/pathway/cpp',(req,res)=>{
-    res.render('pathway/cpp')
+
+
+app.get('/r/:subreddit',(req,res)=>{
+    const{subreddit} = req.params;
+    const data = pathdata[subreddit];
+    console.log(data);
+    if(data){
+    res.render('subreddit', {...data});
+    }else{
+        res.render('notfound',{subreddit})
+    }
 })
+// app.get('/pathway/cpp',(req,res)=>{
+//     res.render('pathway/cpp')
+// })
+
+
+
 
 app.get('/whatnext',(req,res)=>{
     res.render('whatnext')

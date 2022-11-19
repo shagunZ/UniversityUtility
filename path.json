@@ -1,0 +1,33 @@
+{
+    "cpp": {
+          "name": "cpp",
+          "description": "C++, developed by Bjarne Stroustrup, is a general-purpose programming language and is considered an advanced version of the C programming language. It offers rich library support in the form of a Standard Template Library. The language is widely used in various GUI platforms, Cloud/Distributed Systems, Operating Systems, real-time simulations, etc. Moreover, as C++ is an object-oriented programming language, it allows you to implement real-time problems through OOPS concepts. ",
+          "posts": [
+              {
+                  "topic": "cpp",
+                  "title": " The language is widely used in various GUI platforms, Cloud/Distributed Systems, Operating Systems, real-time simulations, etc. Moreover, as C++ is an object-oriented programming language, it allows you to implement real-time problems through OOPS concepts. ",
+                  "about": " Needless to say, you’re required to start learning C++ programming language with the introduction and fundamentals of the language. You need to understand the features of the C++ language, and what are its applications. Furthermore, you’re required to know how to set up an environment to compile & run your C++ program. You can create your first C++ program as well for more clarification of the fundamentals. Meanwhile, you can explore several other related topics such as the difference b/w C & C++, C++ vs JAVA, etc.Now you need to know about the building blocks of C++ programming – DataTypes, Variables & Operators. You need to get a thorough understanding of data types and how they are used, what are variables, how they are declared and initialized, the use of operators in C++, etc. It will help you to get familiar with the basic structure and syntax of C++ programming. There are several other topics also to be considered here such as Reference Variables, Operator Overloading, Optional Parameters, and others.",
+                  "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS83EQ2Mjvdgj0POZKKsQQvuij9OxTBeCGtfQ&usqp=CAU",
+                  "links":"https://www.geeksforgeeks.org/learn-cpp-programming-step-by-step-a-20-day-curriculum/",
+                  "youtube":"https://www.youtube.com/embed/vLnPwxZdW4Y"
+             
+                }
+          ]
+        },
+
+    "java": {
+          "name": "java",
+          "description": "updates about Job opening",
+          "posts": [
+              {
+                "topic": "java",
+                "title": "Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995. James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java. ",
+                "about": "Java is used in all kinds of applications like Mobile Applications (Android is Java-based), desktop applications, web applications, client-server applications, enterprise applications, and many more.Java has been one of the most popular programming languages for many years.Java is Object Oriented. However, it is not considered as pure object-oriented as it provides support for primitive data types (like int, char, etc)The Java codes are first compiled into byte code (machine-independent code). Then the byte code runs on Java Virtual Machine (JVM) regardless of the underlying architecture.Java syntax is similar to C/C++. But Java does not provide low-level programming functionalities like pointers. Also, Java codes are always written in the form of classes and objects.",
+                "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStJNbZWAb0k5fhSc3i7zJJnpp7W7EiVSmfzA&usqp=CAU",
+                "links":"https://www.geeksforgeeks.org/java/",
+                "youtube":"https://www.youtube.com/embed/eIrMbAQSU34"
+              
+            }
+          ]
+  }
+  }
