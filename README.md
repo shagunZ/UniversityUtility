@@ -15,4 +15,5 @@ Follow the steps given below to run the application:
 
 1. Download and install node.js from its official site ([Node.js official site](https://nodejs.org/en/download/))
 or directly download the 64-bit [Microsoft installer](https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi) of the package or the [MacOS installer](https://nodejs.org/dist/v18.12.1/node-v18.12.1.pkg).
-2. Check if the package have been installed successfully or not by executing 
+2. Check if the package have been installed successfully or not by executing `node -v` command at the command prompt.
+3. After successful installation of node.js, clone the repository of this poject onto
